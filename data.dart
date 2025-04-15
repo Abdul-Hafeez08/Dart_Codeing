@@ -22,7 +22,7 @@ void main() {
   print('Is Logged In: $isLoggedIn');
 
   // List (array)
-  List<String> fruits = ['Apple', 'Banana', 'Mango'];
+  List<dynamic> fruits = ['Apple', 'Banana', 5, 5];
   print('Fruits: ${fruits[1]}');
 
   // Set (unique values only)
