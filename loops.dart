@@ -34,4 +34,10 @@ void main() {
     }
     print(i);
   }
+
+  var map = {'name': 'Alice', 'age': 25, 'city': 'New York'};
+
+  for (var entry in map.entries) {
+    print('Key: ${entry.key}, Value: ${entry.value}');
+  }
 }

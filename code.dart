@@ -5,7 +5,7 @@ void main() {
   String? name = stdin.readLineSync();
 
   print("Enter your age: ");
-  String? age = stdin.readLineSync();
+  int? age = int.tryParse(stdin.readLineSync()!);
 
   print("Enter your phone number: ");
   String? phone = stdin.readLineSync();
