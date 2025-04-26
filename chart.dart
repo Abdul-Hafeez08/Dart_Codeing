@@ -30,8 +30,11 @@ void main() {
       case '2':
         stdout.write('Enter item name to remove: ');
         String? nameToRemove = stdin.readLineSync();
-        bool removed =
-            cart.removeWhere((item) => item['name'] == nameToRemove) > 0;
+
+        int initialLength = cart.length;
+        cart.removeWhere((item) => item['name'] == nameToRemove);
+        bool removed = cart.length < initialLength;
+
         removed
             ? print('🗑️ $nameToRemove removed.')
             : print('❌ Item not found.');
