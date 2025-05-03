@@ -3,26 +3,21 @@ class Person {
   String name = 'Unknown';
   int age = 0;
 
-  // 1️⃣ Default Constructor
+  // 1 Default Constructor
   Person() {
     print('Default constructor called');
   }
 
-  // 2️⃣ Parameterized Constructor
-  Person.parameterized(this.name, this.age) {
+  // 2 Parameterized Constructor
+  Person.parameterized(name, age) {
     print('Parameterized constructor called');
   }
 
-  // 3️⃣ Named Constructor
+  // 3 Named Constructor
   Person.guest() {
     name = 'Guest';
     age = 0;
     print('Named constructor "guest" called');
-  }
-
-  // 4️⃣ Named Optional Parameters Constructor
-  Person.optional({this.name = 'Optional', this.age = 18}) {
-    print('Named optional constructor called');
   }
 
   void display() {
@@ -36,14 +31,10 @@ void main() {
   p1.display(); // Name: Unknown, Age: 0
 
   // Using parameterized constructor
-  var p2 = Person.parameterized('Ali', 25);
+  var p2 = Person.parameterized('Ali', 4);
   p2.display(); // Name: Ali, Age: 25
 
   // Using named constructor
   var p3 = Person.guest();
   p3.display(); // Name: Guest, Age: 0
-
-  // Using named optional parameters
-  var p4 = Person.optional(age: 30);
-  p4.display(); // Name: Optional, Age: 30
 }
