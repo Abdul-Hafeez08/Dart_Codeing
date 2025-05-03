@@ -5,7 +5,7 @@ void main() {
   int? birthYear = int.tryParse(stdin.readLineSync() ?? '');
 
   if (birthYear == null) {
-    print('❌ Invalid year.');
+    print(' Invalid year.');
     return;
   }
 
@@ -15,12 +15,12 @@ void main() {
   print('\nYou are $age years old.');
 
   if (age < 13) {
-    print('👶 You are a child.');
+    print(' You are a child.');
   } else if (age < 18) {
-    print('🧒 You are a teenager.');
+    print(' You are a teenager.');
   } else if (age < 60) {
-    print('🧑 You are an adult.');
+    print(' You are an adult.');
   } else {
-    print('👴 You are a senior citizen.');
+    print(' You are a senior citizen.');
   }
 }

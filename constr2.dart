@@ -1,16 +1,18 @@
 class Student {
-  String name;
-  int age;
+  String? name = "hafeez";
+  int? age;
 
-  // 1️⃣ Regular Parameterized Constructor
-  Student(String n, int a)
-      : name = n,
-        age = a;
+  // 1 Regular Parameterized Constructor
+  Student(String name, int age) {
+    // this.name = name;
+    this.age = age;
 
-  // 2️⃣ Shorthand Constructor using 'this'
+    print(name);
+  }
+  // 2 Shorthand Constructor using 'this'
   Student.shorthand(this.name, this.age);
 
-  // 3️⃣ Named Parameterized Constructor
+  // 3 Named Parameterized Constructor
   Student.named({required this.name, required this.age});
 
   void showInfo(String type) {

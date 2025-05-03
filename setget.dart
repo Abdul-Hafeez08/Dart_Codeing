@@ -2,6 +2,8 @@ class Student {
   String _name = '';
   int _age = 0;
 
+  String get name => _name;
+
   set name(String value) {
     if (value.isNotEmpty) {
       _name = value;
